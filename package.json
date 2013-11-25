@@ -1,0 +1,14 @@
+{
+  "name": "GitHub-client",
+  "version": "0.0.1",
+  "description": "An unofficial GitHub clien for the Web",
+  "author": "fantasyshao",
+  "license": "MIT",
+  "repository": "https://github.com/SFantasy/GitHub-client",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}

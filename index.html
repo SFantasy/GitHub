@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="fantasyshao">
+        <meta name="description" content="An unofficial GitHub client for the Web.">
+        <title>unofficial GitHub client</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    </head>
+    <body>
+        <!-- First page(GitHub news) begin -->
+        <div data-role="page" tabindex="0" id="news">
+            <div data-role="header">
+                <h1>GitHub news</h1>
+            </div>
+            <div data-role="content">
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="#news" class="ui-btn-active" data-transition="slide">News</a>
+                        </li>
+                        <li>
+                            <a href="#mine" data-transition="slide">my GitHub</a>
+                        </li>
+                        <li>
+                            <a href="#setting" data-transition="slide">Setting</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>            
+        </div>
+        <!-- First page end -->
+        <!-- Second page(My GitHub) begin -->
+        <div data-role="page" id="mine">
+            <div data-role="header">
+                <h1>My GitHub</h1>
+            </div>
+            <div data-role="content"></div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="#news" data-transition="slide">News</a>
+                        </li>
+                        <li>
+                            <a href="#mine" class="ui-btn-active" data-transition="slide">my GitHub</a>
+                        </li>
+                        <li>
+                            <a href="#setting" data-transition="slide">Setting</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Second page end -->
+        <!-- Third page(Setting) begin -->
+        <div data-role="setting" id="setting">
+            <div data-role="header">
+                <h1>Setting</h1>
+            </div>
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <label for="name">Username:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <button id="save-user">OK</button>
+                <div data-role="popup" id="accountNoty">
+                    <p></p>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li>
+                            <a href="#news" data-transition="slide">News</a>
+                        </li>
+                        <li>
+                            <a href="#mine" data-transition="slide">my GitHub</a>
+                        </li>
+                        <li>
+                            <a href="#setting" class="ui-btn-active" data-transition="slide">Setting</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Third page end -->
+        <script src="dist/js/main.js"></script>
+    </body>
+</html>
