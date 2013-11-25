@@ -1,7 +1,11 @@
 GitHub
 ===
 
-The unofficial GitHub client for the Web.
+The unofficial GitHub client for the mobile browsers.
+
+**It's on the road.**
+
+[View it on your cell phone.](http://fantasyshao.com/GitHub/)
 
 ## Dependence
 
