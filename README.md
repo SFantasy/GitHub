@@ -15,7 +15,7 @@ The unofficial GitHub client for the mobile browsers.
 ## TODO
 
 * Render news for the specificed user
-* Render contents for the specificed user
+* ~~Render contents for the specificed user~~
 
 ## License
 
