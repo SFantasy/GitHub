@@ -9,8 +9,8 @@ The unofficial GitHub client for the mobile browsers.
 
 ## Dependence
 
-* GitHub API
-* jQuery Mobile
+* [GitHub API](https://api.github.com/)
+* [jQuery Mobile](http://jquerymobile.com/)
 
 ## TODO
 
