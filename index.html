@@ -7,6 +7,7 @@
         <meta name="description" content="An unofficial GitHub client for the Web.">
         <title>unofficial GitHub client</title>
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+        <link rel="stylesheet" href="dist/css/main.css">
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
     </head>
@@ -17,6 +18,11 @@
                 <h1>GitHub news</h1>
             </div>
             <div data-role="content">
+                <ul id="newsList" data-role="listview" data-inset="true">
+                </ul>
+                <div data-role="popup" id="newsNoty">
+                    <p></p>
+                </div>
             </div>
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
@@ -40,7 +46,41 @@
             <div data-role="header">
                 <h1>My GitHub</h1>
             </div>
-            <div data-role="content"></div>
+            <div data-role="content">
+                <div class="gh-avatar">
+                    <img id="ghAvatar" src="">
+                </div>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-b">
+                            <span>Followers</span>
+                            <b id="ghFollow"></b>
+                        </div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-b">
+                            <span>Following</span>
+                            <b id="ghFollowing"></b>
+                        </div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-b">
+                            <span>Starred</span>
+                            <b id="ghStar"></b>
+                        </div>
+                    </div>
+                </div>
+                <ul data-role="listview" data-inset="true">
+                    <li id="ghName"><a href="#"></a></li>
+                    <li id="ghLocation"><a href="#"></a></li>
+                    <li id="ghCompany"><a href="#"></a></li>
+                    <li id="ghEmail"><a href="#"></a></li>
+                    <li id="ghBlog"><a href="#"></a></li>
+                </ul>
+                <div data-role="popup" id="mineNoty">
+                    <p></p>
+                </div>
+            </div>
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
