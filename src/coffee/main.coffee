@@ -50,7 +50,20 @@ class GitHub
                 url: self.getAction().basicUrl + USER_NAME + '/received_events'
                 success: (data) ->
                     for item in data
-                        console.log item
+                        if item.type isnt 'GistEvent'
+                            console.log item
+                            if item.payload.action is ''
+                                word = 'created '
+                            else
+                                word = 'starred '
+
+                            $('#newsList').append '<li>' +
+                                                '<img src="' + item.actor.avatar_url + '">' +
+                                                '<h2>' + item.actor.login + '</h2>has ' + word +
+                                                item.repo.name + '</a>' + '</li>'
+
+                    $('#newsList').listview 'refresh'
+
             # Render information of the specificed user
             $.ajax
                 url: self.getAction().basicUrl + USER_NAME
@@ -58,6 +71,7 @@ class GitHub
                     $('#ghAvatar').attr 'src', data.avatar_url
                     $('#ghFollow').text data.followers
                     $('#ghFollowing').text data.following
+
                     $.ajax
                         url: self.getAction().basicUrl + USER_NAME + '/starred'
                         success: (data) ->

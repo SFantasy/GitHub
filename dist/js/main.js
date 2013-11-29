@@ -40,13 +40,20 @@
         $.ajax({
           url: self.getAction().basicUrl + USER_NAME + '/received_events',
           success: function(data) {
-            var item, _i, _len, _results;
-            _results = [];
+            var item, word, _i, _len;
             for (_i = 0, _len = data.length; _i < _len; _i++) {
               item = data[_i];
-              _results.push(console.log(item));
+              if (item.type !== 'GistEvent') {
+                console.log(item);
+                if (item.payload.action === '') {
+                  word = 'created ';
+                } else {
+                  word = 'starred ';
+                }
+                $('#newsList').append('<li>' + '<img src="' + item.actor.avatar_url + '">' + '<h2>' + item.actor.login + '</h2>has ' + word + item.repo.name + '</a>' + '</li>');
+              }
             }
-            return _results;
+            return $('#newsList').listview('refresh');
           }
         });
         $.ajax({
