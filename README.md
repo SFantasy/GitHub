@@ -3,8 +3,6 @@ GitHub
 
 The unofficial GitHub client for the mobile browsers.
 
-**It's on the road.**
-
 [View it on your cell phone.](http://fantasyshao.com/GitHub/)
 
 ## Dependence
@@ -14,7 +12,7 @@ The unofficial GitHub client for the mobile browsers.
 
 ## TODO
 
-* Render news for the specificed user
+* ~~Render news for the specificed user~~
 * ~~Render contents for the specificed user~~
 
 ## License
